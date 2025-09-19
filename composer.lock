@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c8cde4d2dd0a288560c2b2673226b0c",
+    "content-hash": "5379fb37176c3ba84e8a9278c5620b8d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7735,11 +7735,17 @@
         },
         {
             "name": "opscale-co/strict-rules",
-            "version": "1.0.0",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opscale-co/strict-rules.git",
+                "reference": "221f8ce471cc126f2cf55fac9fb46cddb2563b3a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../strict-rules",
-                "reference": "33a215ee8603e93421e929d427a9bc54c5c66678"
+                "type": "zip",
+                "url": "https://api.github.com/repos/opscale-co/strict-rules/zipball/221f8ce471cc126f2cf55fac9fb46cddb2563b3a",
+                "reference": "221f8ce471cc126f2cf55fac9fb46cddb2563b3a",
+                "shasum": ""
             },
             "require": {
                 "larastan/larastan": "^3.4",
@@ -7771,19 +7777,16 @@
                     "Opscale\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Opscale\\": "tests/fixtures",
-                    "Opscale\\Tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Opinionated Opscale rules for enforcing software architecture guidelines",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/opscale-co/strict-rules/issues",
+                "source": "https://github.com/opscale-co/strict-rules/tree/v1.1.3"
+            },
+            "time": "2025-09-19T01:34:22+00:00"
         },
         {
             "name": "orchestra/canvas",
