@@ -21,6 +21,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      - name: 🟢 Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install Node dependencies
+        run: npm ci --ignore-scripts
+
       - name: 🐘 Setup PHP 8.2
         uses: shivammathur/setup-php@v2
         with:
