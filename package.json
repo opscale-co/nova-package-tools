@@ -1,0 +1,36 @@
+{
+  "name": "project",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "./vendor/bin/duster lint --dirty",
+    "fix": "./vendor/bin/duster fix --dirty",
+    "refactor": "./vendor/bin/rector process",
+    "test": "./vendor/bin/phpunit tests",
+    "test:coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit tests -c phpunit.xml.dist",
+    "check": "npm run fix && npm run refactor && npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.4.0",
+    "@commitlint/prompt": "^19.4.0",
+    "@eslint/js": "^9.34.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.3.0",
+    "lint-staged": "^16.1.5",
+    "semantic-release": "^24.2.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

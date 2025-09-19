@@ -1,0 +1,69 @@
+{
+  "name": "opscale-co/nova-package-tools",
+  "description": "Tools for creating Nova packages",
+  "keywords": [
+    "opscale",
+    "nova-package-tools"
+  ],
+  "homepage": "https://github.com/opscale-co/nova-package-tools",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Opscale",
+      "email": "development@opscale.co",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/contracts": "^9.28|^10.0|^11.0|^12.0",
+    "laravel/nova": "^5.7",
+    "spatie/laravel-package-tools": "^1.14"
+  },
+  "require-dev": {
+    "driftingly/rector-laravel": "^2.0",
+    "larastan/larastan": "^3.6",
+    "mockery/mockery": "^1.5",
+    "opscale-co/strict-rules": "^1.0",
+    "orchestra/testbench": "^7.7|^8.0|^9.0|^10.0",
+    "phpunit/php-code-coverage": "^9.0|^10.0|^11.0",
+    "phpunit/phpunit": "^9.5.24|^10.5|^11.5",
+    "rector/rector": "^2.1",
+    "tightenco/duster": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Opscale\\NovaPackageTools\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Opscale\\": "tests/fixtures",
+      "Opscale\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --colors=always",
+    "test-coverage": "@test --coverage",
+    "test-dirty": "@test --dirty --compact",
+    "refactor": "rector"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": false
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": {
+    "nova": {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    },
+    "strict-rules": {
+      "type": "path",
+      "url": "../strict-rules"
+    }
+  }
+}
