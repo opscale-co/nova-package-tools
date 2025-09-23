@@ -20,7 +20,7 @@ This package extends [Spatie's Laravel Package Tools](https://github.com/spatie/
 
 ## Installation
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/opscale-co/nova-catalogs.svg?style=flat-square)](https://packagist.org/packages/opscale-co/nova-catalogs)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/opscale-co/nova-package-tools.svg?style=flat-square)](https://packagist.org/packages/opscale-co/nova-package-tools)
 
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
