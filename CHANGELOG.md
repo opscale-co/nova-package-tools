@@ -2,6 +2,12 @@
 
 All notable changes to opscale-co/nova-package-tools will be documented in this file.
 
+## [1.0.1](https://github.com/opscale-co/nova-package-tools/compare/v1.0.0...v1.0.1) (2025-09-23)
+
+### Bug Fixes
+
+* **processresource:** fix Nova resources registration ([5f860f6](https://github.com/opscale-co/nova-package-tools/commit/5f860f62eca19ac3a99620e09a3c9d8c400b306a))
+
 ## 1.0.0 (2025-09-19)
 
 ### Features
