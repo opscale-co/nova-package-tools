@@ -2,6 +2,8 @@
 
 namespace Opscale\Tests\PackageServiceProviderTests\ResourcesTests;
 
+use Illuminate\Http\Request;
+use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Opscale\Nova\SecondTestResource;
 use Opscale\Nova\TestResource;
@@ -45,6 +47,10 @@ class ResourcesIntegrationTest extends TestCase
 
         $provider->register();
         $provider->boot();
+
+        // Trigger the Nova serving event to register resources
+        $request = new Request;
+        event(new ServingNova($this->app, $request));
 
         $registeredResources = Nova::$resources;
 

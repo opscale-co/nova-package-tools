@@ -2,6 +2,8 @@
 
 namespace Opscale\Tests\PackageServiceProviderTests\ResourcesTests;
 
+use Illuminate\Http\Request;
+use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 use Opscale\Nova\TestResource;
 use Opscale\NovaPackageTools\Concerns\Package\HasResources;
@@ -42,6 +44,10 @@ class PackageHasResourceTest extends TestCase
 
         $provider->register();
         $provider->boot();
+
+        // Trigger the Nova serving event to register resources
+        $request = new Request;
+        event(new ServingNova($this->app, $request));
 
         $registeredResources = Nova::$resources;
 
