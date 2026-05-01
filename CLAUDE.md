@@ -65,3 +65,8 @@ When asked to publish, verify the following requirements:
 - **Definition of Done**: Code is complete only when all tests are passing
 - **Version Control**: Force git commit before major changes involving many files
 - **Linting Auto-Fix**: Always run `npm run fix` after generating code and before running `npm run lint` to automatically fix typing errors and formatting issues
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->

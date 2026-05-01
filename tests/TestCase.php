@@ -1,18 +1,24 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Opscale\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
+use Override;
 
-class TestCase extends Orchestra
+abstract class TestCase extends Orchestra
 {
-    protected function setUp(): void
+    #[Override]
+    protected function defineEnvironment($app): void
     {
-        parent::setUp();
-    }
+        parent::defineEnvironment($app);
 
-    protected function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ]);
     }
 }
