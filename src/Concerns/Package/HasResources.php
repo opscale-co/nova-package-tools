@@ -2,15 +2,16 @@
 
 namespace Opscale\NovaPackageTools\Concerns\Package;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
 trait HasResources
 {
-    /** @var array<int, class-string<\Laravel\Nova\Resource<\Illuminate\Database\Eloquent\Model>>> */
+    /** @var array<int, class-string<\Laravel\Nova\Resource<Model>>> */
     public array $resources = [];
 
     /**
-     * @param  class-string<\Laravel\Nova\Resource<\Illuminate\Database\Eloquent\Model>>  $resourceClassName
+     * @param  class-string<\Laravel\Nova\Resource<Model>>  $resourceClassName
      *
      * @overridable
      */
@@ -22,13 +23,13 @@ trait HasResources
     }
 
     /**
-     * @param  array<int, class-string<\Laravel\Nova\Resource<\Illuminate\Database\Eloquent\Model>>>|class-string<\Laravel\Nova\Resource<\Illuminate\Database\Eloquent\Model>>  ...$resourceClassNames
+     * @param  array<int, class-string<\Laravel\Nova\Resource<Model>>>|class-string<\Laravel\Nova\Resource<Model>>  ...$resourceClassNames
      *
      * @overridable
      */
     final public function hasResources(...$resourceClassNames): static
     {
-        /** @var array<int, class-string<\Laravel\Nova\Resource<\Illuminate\Database\Eloquent\Model>>> $flattened */
+        /** @var array<int, class-string<\Laravel\Nova\Resource<Model>>> $flattened */
         $flattened = (new Collection($resourceClassNames))
             ->flatten()
             ->toArray();

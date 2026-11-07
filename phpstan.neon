@@ -4,7 +4,7 @@ includes:
     - vendor/opscale-co/strict-rules/rules.solid.neon
 parameters:
     level: 9
-    phpVersion: 80200
+    phpVersion: 80300
     paths:
         - src
         - tests
@@ -14,5 +14,5 @@ parameters:
         # Pest binds $this to the configured TestCase at runtime, but PHPStan
         # sees PHPUnit's TestCase and can't resolve Orchestra Testbench properties.
         -
-            message: '#Access to an undefined property PHPUnit\\Framework\\TestCase::\$app#'
+            message: '#Access to an undefined property (PHPUnit\\Framework\\TestCase|Pest\\PendingCalls\\TestCall)::\$app#'
             path: tests/*

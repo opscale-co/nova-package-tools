@@ -65,7 +65,6 @@ it('registers a page route via Nova::router', function (): void {
 });
 
 it('skips registration when routes are cached', function (): void {
-    /** @phpstan-ignore method.notFound */
     $legacyMock = Mockery::mock($this->app)
         ->makePartial()
         ->shouldReceive('routesAreCached')
